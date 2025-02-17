@@ -260,18 +260,6 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
   [[EXKernel sharedInstance] reloadVisibleApp];
 }
 
-- (void)_handleDisableDebuggingCommand
-{
-  [[EXKernel sharedInstance].visibleApp.appManager disableRemoteDebugging];
-}
-
-- (void)_handleToggleRemoteDebuggingCommand
-{
-  [[EXKernel sharedInstance].visibleApp.appManager toggleRemoteDebugging];
-  // This reloads manifest and JS
-  [[EXKernel sharedInstance] reloadVisibleApp];
-}
-
 - (void)_handleTogglePerformanceMonitorCommand
 {
   [[EXKernel sharedInstance].visibleApp.appManager togglePerformanceMonitor];
